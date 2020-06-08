@@ -1,0 +1,30 @@
+.good_container .good_item {
+  padding: 15rpx;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+.good_container .good_item .good_image_wrap {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.good_container .good_item .good_image_wrap image {
+  width: 70%;
+}
+.good_container .good_item .good_info_wrap {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.good_container .good_item .good_info_wrap .good_name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.good_container .good_item .good_info_wrap .good_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}

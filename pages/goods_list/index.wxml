@@ -1,0 +1,17 @@
+<view class="good_container">
+    <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" wx:for="{{goodList}}" wx:key="goods_id" class="good_item">
+        <!-- 左侧图片容器 -->
+        <view class="good_image_wrap">
+            <image mode="widthFix" src="{{item.goods_small_logo}}" />
+        </view>
+        <!-- 右侧商品信息 -->
+        <view class="good_info_wrap">
+            <view class="good_name">
+                {{item.goods_name}}
+            </view>
+            <view class="good_price">
+                {{item.goods_price}}
+            </view>
+        </view>
+    </navigator>
+</view>

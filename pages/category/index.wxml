@@ -1,0 +1,25 @@
+<view class="cates">
+    <SearchInput></SearchInput>
+    <view class="cates_cantainer">
+        <!-- 左侧菜单 -->
+        <scroll-view scroll-y="{{true}}" class="left_menu ">
+            <view class="left_menu_item {{index===currentIndex?'active':''}}" wx:for="{{leftMenuList}}" wx:key="*this" bindtap="switchtab" data-index="{{index}}">
+                {{item}}
+            </view>
+        </scroll-view>
+        <!-- 右侧菜单 -->
+        <scroll-view scroll-top="{{scrollTop}}" scroll-y="{{true}}" class="right_menu">
+            <view class="good_warp" wx:for="{{rightMenuList}}" wx:key="cat_id">
+                <view class="good_title">{{item.cat_name}}</view>
+                <view class="good_list_container">
+                    <view wx:for="{{item.children}}" wx:for-item="item2" wx:for-index="index2" wx:key="cat_id" class="good_list">
+                        <navigator url="/pages/goods_list/index?cid={{item2.cat_id}}" class="good_">
+                            <image mode="widthFix" src="{{item2.cat_icon}}" />
+                            <view class="good_name">{{item2.cat_name}}</view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

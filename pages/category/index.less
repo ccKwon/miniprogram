@@ -1,0 +1,67 @@
+page {
+    height: 100%;
+}
+
+.cates {
+    height: 100%;
+
+    .cates_cantainer {
+        height : ~'calc( 100vh - 90rpx )';
+        display: flex;
+
+        .left_menu {
+            flex: 2;
+
+            .left_menu_item {
+                height          : 80rpx;
+                display         : flex;
+                justify-content : center;
+                align-items     : center;
+                font-size       : 30rpx;
+                background-color: #f0f0f0;
+            }
+
+            .active {
+                color       : var(--themeColor);
+                border-right: 5rpx solid currentColor;
+            }
+        }
+
+        .right_menu {
+            flex: 5;
+
+            .good_warp {
+
+                .good_title {
+                    height         : 80rpx;
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+                }
+
+                .good_list_container {
+                    display  : flex;
+                    flex-wrap: wrap;
+
+                    .good_list {
+                        width: 33.33%;
+                        padding: 15rpx;
+                        navigator {
+                            text-align: center;
+
+                            image {
+                                width: 50%;
+                            }
+
+                            .good_name {}
+                        }
+
+                    }
+                    margin-bottom: 15rpx;
+                }
+
+            }
+
+        }
+    }
+}

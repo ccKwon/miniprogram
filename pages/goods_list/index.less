@@ -1,0 +1,34 @@
+.good_container {
+    .good_item {
+        padding: 15rpx;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        .good_image_wrap{
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            image {
+                width: 70%;
+            }
+        }
+
+        .good_info_wrap{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .good_name{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp:2;
+                overflow: hidden;
+            }
+
+            .good_price{
+                color: var(--themeColor);
+                font-size: 32rpx;
+            }
+        }
+    }
+}
